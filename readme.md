@@ -14,7 +14,7 @@ This project works with the [OpenLLaMA 3B V2](https://huggingface.co/openlm-rese
 
 The model gets fine-tuned for question-answering performance with the [SQuAD V2](https://huggingface.co/spaces/evaluate-metric/squad_v2) dataset. The SQuAD V2 dataset has a part that's supposed to be used in training and another part in validation.
 
-The fine-tuning uses the Low-Rank Adaptation (LoRA) training technique. LoRA is a type of Parameter Efficient Fine-Tuning (PEFT), which updates only a small subset of parameters without changing the model weights. This helps preventing catastrophic forgetting. PEFT requires much less computing power and training data than full fine-tuning of a whole model.
+The fine-tuning uses the Low-Rank Adaptation (LoRA) training technique. LoRA is a type of Parameter Efficient Fine-Tuning (PEFT), which updates only a small portion of the weights relative to the full model size, keeping the bulk of the model unchanged. This helps preventing catastrophic forgetting. PEFT requires much less computing power and training data than full fine-tuning of a whole model.
 
 You need a Hugging Face API key with write permissions for this project. [Get your free Hugging Face API key with write permission here](https://huggingface.co/settings/tokens). Insert your Hugging Face API key in the "ai-fine-tuning.py" file. The write permissions are required, if you want to upload the new (trained) model adapter to Hugging Face.
 
